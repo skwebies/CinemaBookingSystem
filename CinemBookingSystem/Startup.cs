@@ -6,6 +6,8 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using CinemaBookingData;
+using Microsoft.EntityFrameworkCore;
 
 namespace CinemBookingSystem
 {
@@ -13,6 +15,7 @@ namespace CinemBookingSystem
     {
         public Startup(IConfiguration configuration)
         {
+            
             Configuration = configuration;
         }
 
@@ -22,6 +25,8 @@ namespace CinemBookingSystem
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
+
+            services.AddDbContext<CinemaContext>(options => options.UseSqlServer(Configuration.GetConnectionString("CinemaBookingConnection")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

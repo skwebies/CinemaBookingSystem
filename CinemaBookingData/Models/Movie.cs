@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Text;
 
 namespace CinemaBookingData.Models
@@ -20,6 +21,7 @@ namespace CinemaBookingData.Models
 
         public string MovieType { get; set; }
 
+        [NotMapped]
         public virtual ICollection<Screening> Screenings { get; set; }
 
 

@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26730.16
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CinemBookingSystem", "CinemBookingSystem\CinemBookingSystem.csproj", "{5CC1C0DC-F8AE-44F8-8BF1-9BCA2D796BA8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CinemaBookingSystem", "CinemBookingSystem\CinemaBookingSystem.csproj", "{5CC1C0DC-F8AE-44F8-8BF1-9BCA2D796BA8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CinemaBookingData", "CinemaBookingData\CinemaBookingData.csproj", "{4E4AD9AB-A58C-490A-B8C5-56D682E71BD0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CinemaBookingData", "CinemaBookingData\CinemaBookingData.csproj", "{4E4AD9AB-A58C-490A-B8C5-56D682E71BD0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

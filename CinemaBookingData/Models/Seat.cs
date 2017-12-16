@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Text;
 
 namespace CinemaBookingData.Models
@@ -13,6 +14,10 @@ namespace CinemaBookingData.Models
         public int SeatNumber { get; set; }
 
         public int AuditoriumId { get; set; }
+
+        [NotMapped]
+        public virtual ICollection<SeatReserved> SeatsReserved { get; set; }
+
 
     }
 }
