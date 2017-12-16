@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.26730.16
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CinemBookingSystem", "CinemBookingSystem\CinemBookingSystem.csproj", "{5CC1C0DC-F8AE-44F8-8BF1-9BCA2D796BA8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CinemaBookingData", "CinemaBookingData\CinemaBookingData.csproj", "{4E4AD9AB-A58C-490A-B8C5-56D682E71BD0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{5CC1C0DC-F8AE-44F8-8BF1-9BCA2D796BA8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5CC1C0DC-F8AE-44F8-8BF1-9BCA2D796BA8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5CC1C0DC-F8AE-44F8-8BF1-9BCA2D796BA8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4E4AD9AB-A58C-490A-B8C5-56D682E71BD0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E4AD9AB-A58C-490A-B8C5-56D682E71BD0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E4AD9AB-A58C-490A-B8C5-56D682E71BD0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E4AD9AB-A58C-490A-B8C5-56D682E71BD0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
