@@ -11,7 +11,7 @@ namespace CinemBookingSystem.Controllers
 {
     public class HomeController : Controller
     {
-        private IMovieRepository _movieRepository;
+        private readonly IMovieRepository _movieRepository;
         public HomeController(IMovieRepository movieRepository)
         {
             _movieRepository = movieRepository;    

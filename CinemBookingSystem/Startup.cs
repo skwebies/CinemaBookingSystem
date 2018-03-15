@@ -4,6 +4,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.EntityFrameworkCore;
 using CinemaBookingData;
+using CinemaBookingSystem.Interfaces;
+using CinemaBookingSystem.Repositories;
 
 namespace CinemBookingSystem
 {
@@ -21,6 +23,7 @@ namespace CinemBookingSystem
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
+            services.AddScoped<IMovieRepository, MovieRepository>();
 
             services.AddDbContext<CinemaContext>(options => options.UseSqlServer(Configuration.GetConnectionString("CinemaBookingConnection")));
         }

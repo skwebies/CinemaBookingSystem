@@ -21,7 +21,7 @@ namespace CinemaBookingSystem.Repositories
         //Get all movies with screenings
         public IEnumerable<Movie> GetAllMovies()
         {
-            var movies = _context.Movies.Include(s => s.Screenings).ToList();
+            var movies = _context.Movies.ToList();
 
             return movies;
         }
