@@ -19,6 +19,15 @@ namespace CinemBookingSystem
 
         public static IWebHost BuildWebHost(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
+                .ConfigureAppConfiguration(
+            (WebHostBuilderContext context, IConfigurationBuilder builder) =>
+            {
+                builder.Sources.Clear();
+
+                builder
+                    .AddEnvironmentVariables()
+                    .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true);
+            })
                 .UseStartup<Startup>()                
                 .Build();
     }

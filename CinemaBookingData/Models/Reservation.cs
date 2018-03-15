@@ -1,11 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Text;
 
 namespace CinemaBookingData.Models
 {
     public class Reservation
     {
+        [Key]
         public int ReservationId { get; set; }
 
         public int ScreeningId { get; set; }
