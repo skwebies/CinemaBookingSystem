@@ -5,14 +5,22 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using CinemBookingSystem.Models;
+using CinemaBookingSystem.Interfaces;
 
 namespace CinemBookingSystem.Controllers
 {
     public class HomeController : Controller
     {
+        private IMovieRepository _movieRepository;
+        public HomeController(IMovieRepository movieRepository)
+        {
+            _movieRepository = movieRepository;    
+        }
+
         public IActionResult Index()
         {
-            return View();
+            var movies = _movieRepository.GetAllMovies();
+            return View(movies);
         }
 
         public IActionResult About()

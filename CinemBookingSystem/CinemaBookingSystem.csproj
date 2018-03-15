@@ -17,9 +17,4 @@
     <ProjectReference Include="..\CinemaBookingData\CinemaBookingData.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Interfaces\" />
-    <Folder Include="Repositories\" />
-  </ItemGroup>
-
 </Project>
