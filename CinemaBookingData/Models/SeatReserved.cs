@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace CinemaBookingData.Models
+﻿namespace CinemaBookingData.Models
 {
     public class SeatReserved
     {

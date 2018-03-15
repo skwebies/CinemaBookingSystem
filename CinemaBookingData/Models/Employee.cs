@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Text;
 
 namespace CinemaBookingData.Models
 {
-   public class Employee
+    public class Employee
     {
         [Key]
         public int EmployeeId { get; set; }
