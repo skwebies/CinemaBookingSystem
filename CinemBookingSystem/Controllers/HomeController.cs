@@ -11,17 +11,18 @@ namespace CinemBookingSystem.Controllers
     [Authorize]
     public class HomeController : Controller
     {
-        private readonly IMovieRepository _movieRepository;
-        public HomeController(IMovieRepository movieRepository)
+        private readonly IRepositoryWrapper _repositoryWrapper;
+
+        public HomeController(IRepositoryWrapper repositoryWrapper)
         {
-            _movieRepository = movieRepository;    
+            _repositoryWrapper = repositoryWrapper;    
         }
 
         
         public IActionResult Index()
         {
-
-            return View();
+            var movies = _repositoryWrapper.Movie.GetAll();
+            return View(movies);
             
         }
 

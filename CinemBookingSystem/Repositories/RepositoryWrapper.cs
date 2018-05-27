@@ -9,7 +9,7 @@ namespace CinemaBookingSystem.Repositories
 {
     public class RepositoryWrapper : IRepositoryWrapper
     {
-        private CinemaContext _cinemaContext;
+        private readonly CinemaContext _cinemaContext;
         private IMovieRepository _movie;
         private IAuditoriumRepository _auditorium;
 

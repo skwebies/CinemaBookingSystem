@@ -1,4 +1,5 @@
-﻿@{
+﻿@model IEnumerable<Movie>
+@{
     ViewData["Title"] = "Home Page";
 
 }
@@ -16,6 +17,19 @@
         </div>
         <div class="col-md-8 float-right">
             <h3>List of movies</h3>
+            <ul>
+                @foreach(var movie in Model)
+                {
+                    <li>@movie.MovieName</li>
+                    <li>@movie.MovieType</li>
+                    <li>@movie.Cast</li>
+                    <li>@movie.DirectorName</li>
+                    <li>@movie.Description</li>
+                    <hr />
+                    <li>@movie.Reviews</li>
+
+                }
+            </ul>
         </div>
     </div>
 </div>
