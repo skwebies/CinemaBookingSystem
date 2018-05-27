@@ -1,6 +1,7 @@
 ﻿body {
-    padding-top: 50px;
-    padding-bottom: 20px;
+    padding-bottom: 10px;
+    background:#f1f1f1;
+    
 }
 
 /* Wrapping element */
@@ -38,12 +39,12 @@ body {
     -ms-flex-align: center;
     -ms-flex-pack: center;
     -webkit-box-align: center;
-    align-items: center;
+    
     -webkit-box-pack: center;
     justify-content: center;
-    padding-top: 40px;
+    padding-top:40px;
     padding-bottom: 40px;
-    background-color: #810239;
+    
 }
 
 .form-signin {

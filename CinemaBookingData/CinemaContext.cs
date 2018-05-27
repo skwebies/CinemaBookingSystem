@@ -7,8 +7,9 @@ namespace CinemaBookingData
     {
         public CinemaContext(DbContextOptions<CinemaContext> options) : base(options)
         {
-
+          
         }
+
 
         public DbSet<Movie> Movies { get; set; }
         public DbSet<Auditorium> Auditoriums { get; set; }
@@ -18,6 +19,14 @@ namespace CinemaBookingData
         public DbSet<Screening> Screenings { get; set; }
         public DbSet<Seat> Seats { get; set; }
         public DbSet<SeatReserved> SeatsReserved { get; set; }
+
+
+        
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+        }
 
     }
 }

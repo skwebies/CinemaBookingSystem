@@ -1,14 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using CinemBookingSystem.Models;
 using CinemaBookingSystem.Interfaces;
+using Microsoft.AspNetCore.Authorization;
+using CinemaBookingSystem.Repositories;
+using CinemaBookingData;
 
 namespace CinemBookingSystem.Controllers
 {
+    [Authorize]
     public class HomeController : Controller
     {
         private readonly IMovieRepository _movieRepository;
@@ -17,10 +17,12 @@ namespace CinemBookingSystem.Controllers
             _movieRepository = movieRepository;    
         }
 
+        
         public IActionResult Index()
         {
-            var movies = _movieRepository.GetAllMovies();
-            return View(movies);
+
+            return View();
+            
         }
 
         public IActionResult About()

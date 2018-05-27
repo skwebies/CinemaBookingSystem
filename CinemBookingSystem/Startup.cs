@@ -72,9 +72,9 @@ namespace CinemBookingSystem
 
             services.AddTransient<IEmailSender, EmailSender>();
 
-            services.AddMvc();
+            services.AddScoped<IRepositoryWrapper, RepositoryWrapper>();
 
-            services.AddScoped<IMovieRepository, MovieRepository>();
+            services.AddMvc();            
 
             services.AddDbContext<CinemaContext>(options => options.UseSqlServer(Configuration.GetConnectionString("CinemaBookingConnection")));
 
@@ -96,7 +96,7 @@ namespace CinemBookingSystem
             }
 
             app.UseStaticFiles();
-
+            app.UseAuthentication();
             app.UseMvc(routes =>
             {
                 routes.MapRoute(

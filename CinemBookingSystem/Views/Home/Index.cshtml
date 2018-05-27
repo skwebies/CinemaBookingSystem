@@ -1,18 +1,21 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
-    
+
 }
-<form class="form-signin">
-    <h1 class="h1 font-weight-light text-white">Cinema Booking</h1>
-    <h1 class="h4 mb-3 font-weight-light text-center text-white">Please sign in</h1>
-    <label for="inputEmail" class="sr-only">Email address</label>
-    <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
-    <label for="inputPassword" class="sr-only">Password</label>
-    <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
-    <div class="checkbox mb-3">
-        <label class="text-white">
-            <input type="checkbox" value="remember-me"> Remember me
-        </label>
+<div class="row">
+    <div class="col-md-12">
+        <div class="col-md-4 float-left">
+            <ul class="list-group">
+                <li class="list-group-item text-muted">DASHBOARD</li>
+                <li class="list-group-item"><input type="search" placeholder="Search" class="form-inline form-control" /></li>
+
+                <li class="list-group-item">Movies</li>
+                <li class="list-group-item">Screenings</li>
+                <li class="list-group-item">Booked</li>
+            </ul>
+        </div>
+        <div class="col-md-8 float-right">
+            <h3>List of movies</h3>
+        </div>
     </div>
-    <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
-</form>
+</div>

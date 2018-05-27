@@ -1,0 +1,30 @@
+﻿@model CinemaBookingSystem.Models.Security.LoginViewModel
+
+<style>
+    body {
+        background:#0094ff !important;
+    }
+</style>
+<div class="row">
+    <div class="col-md-12">
+        
+        <div class="col-md-4 offset-4">
+            
+            <form asp-controller="Security" asp-action="Login" method="post" class="form-signin">
+                <h3 class="text-white">Please Login</h3>
+                <div asp-validation-summary="All"></div>
+                <div class="form-group">
+                    <input type="text" asp-for="Username" placeholder="Username" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <input type="password" asp-for="Password" placeholder="Password" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Login" class="form-control btn btn-success" />
+                </div>
+
+            </form>
+
+        </div>
+    </div>
+</div>

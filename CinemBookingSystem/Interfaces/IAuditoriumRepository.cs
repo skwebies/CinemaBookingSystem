@@ -6,10 +6,8 @@ using System.Threading.Tasks;
 
 namespace CinemaBookingSystem.Interfaces
 {
-    public interface IAuditoriumRepository
+    public interface IAuditoriumRepository : IRepository<Auditorium>
     {
-        IEnumerable<Auditorium> GetAllAuditoriums();
-
-        Auditorium GetAllAuditorium(int auditoriumId);
+        
     }
 }

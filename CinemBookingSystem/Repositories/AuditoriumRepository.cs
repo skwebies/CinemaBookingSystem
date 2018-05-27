@@ -9,29 +9,14 @@ using Microsoft.EntityFrameworkCore;
 
 namespace CinemaBookingSystem.Repositories
 {
-    public class AuditoriumRepository : IAuditoriumRepository
+    public class AuditoriumRepository : Repository<Auditorium>, IAuditoriumRepository
     {
-        private CinemaContext _context;
 
-        public AuditoriumRepository(CinemaContext context)
+        public AuditoriumRepository(CinemaContext context) : base(context)
         {
-            _context = context;
+
         }
 
-        //Get auditorium, seats and screenings by auditorium id
-        public Auditorium GetAllAuditorium(int auditoriumId)
-        {
-            var auditorium = _context.Auditoriums.Include(a => a.Seats).Include(a => a.Screenings).Where(a => a.Id == auditoriumId).FirstOrDefault();
-
-            return auditorium;
-        }
-
-        //Get All Auditoriums, seats and screenings
-        public IEnumerable<Auditorium> GetAllAuditoriums()
-        {
-            var auditoriums = _context.Auditoriums.Include(a => a.Seats).Include(a => a.Seats).ToList();
-
-            return auditoriums;
-        }
+        
     }
 }

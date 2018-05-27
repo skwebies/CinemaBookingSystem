@@ -1,10 +1,8 @@
 ﻿using CinemaBookingData;
-using CinemaBookingSystem.Models;
+using CinemaBookingSystem.Models.Security;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 
 namespace CinemaBookingSystem.Controllers
@@ -117,7 +115,7 @@ namespace CinemaBookingSystem.Controllers
                     subject: "Confirm Email",
                     message: callbackurl);
 
-                return RedirectToAction("Index", "Home");
+                return RedirectToAction("Index");
             }
 
             return View(model);
